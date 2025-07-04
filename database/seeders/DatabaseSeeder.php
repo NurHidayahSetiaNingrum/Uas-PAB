@@ -21,12 +21,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $super_admin = User::where('email', 'admin@yahoo.com')->first();
+        $super_admin = User::where('email', 'superadmin@local.com')->first();
 
         if(empty($super_admin)) {
-            User::factory()->create([
+            User::create([
                 'name' => 'Super Admin',
-                'email' => 'admin@yahoo.com',
+                'email' => 'superadmin@local.com',
                 'password' => Hash::make('12345678'),
             ]);
         }
