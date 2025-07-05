@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Permission\Traits\HasRoles;
@@ -61,4 +62,8 @@ public function getFilamentAvatarUrl(): ?string
         ?? $this->getMedia('avatars')?->first()?->getUrl('thumb')
         ?? (new UiAvatarsProvider())->get($this);
 }
+public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
+    }
 }
