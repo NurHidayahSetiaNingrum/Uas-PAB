@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-@foreach ($artikel as $post)
+@foreach ($articles as $post)
 <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-4 py-8 md:flex-row flex-col items-center">
     <div class="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0">
