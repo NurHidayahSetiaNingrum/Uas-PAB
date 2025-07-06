@@ -1,25 +1,27 @@
 @extends('layout')
 @section('content')
-@foreach ($articles as $post)
-<section class="text-gray-600 body-font">
-  <div class="container mx-auto flex px-4 py-8 md:flex-row flex-col items-center">
-    <div class="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0">
-      <a href="{{ route('post.detail', ['slug'=> $post->slug]) }}">
-        <img class="object-cover object-center rounded-md shadow-md w-full h-48" src="{{ $post->getFirstMediaUrl('featured_image') }}" alt="{{ $post->title }}" />
-      </a>
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="-my-8 divide-y-2 divide-gray-100">
+           @foreach ($articles as $post)
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+        <div class="md:w-64 md:mb-0 mb-6 mr-6 flex-shrink-0 flex flex-col">
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ $post->getFirstMediaUrl('featured_images') != '' ? $post->getFirstMediaUrl('featured_images') : "https://dummyimage.com/720x400"}}" alt="blog">
+          <span class="mt-1 text-gray-500 text-sm">{{ $post->created_at }}</span>
+        </div>
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{ $post->title }}</h2>
+          <p class="leading-relaxed">{{ $post->excerpt }}</p>
+          <a href="{{ route ('post.detail', ['slug' => $featured_post->slug]) }}" class="text-indigo-500 inline-flex items-center mt-4">Lihat Selengkapnya
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+          @endforeach
     </div>
-    <div class="w-full md:w-1/2 lg:w-2/3 md:pl-6">
-      <a href="{{ route('post.detail', ['slug'=> $post->slug]) }}">
-        <h1 class="text-xl font-semibold text-gray-900 mb-2">{{ $post->title }}</h1>
-      </a>
-      <a href="{{ route('post.detail', ['slug'=> $post->slug]) }}">
-        <p class="text-sm text-gray-700 mb-3">{{ $post->excerpt }}</p>
-      </a>
-      <a href="{{ route('post.detail', ['slug' => $post->slug]) }}" class="inline-block text-white bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded text-sm">
-        Lihat Selengkapnya
-      </a>
-    </div>
-  </div>
+</div>
 </section>
-@endforeach
 @endsection
