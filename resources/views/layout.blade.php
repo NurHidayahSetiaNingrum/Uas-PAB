@@ -28,8 +28,8 @@
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a class="mr-5 hover:text-gray-900" href="{{ url('/') }}">Home</a>
-      <a class="mr-5 hover:text-gray-900" href="{{ url('/artikel') }}">Artikel</a>
-      <a class="mr-5 hover:text-gray-900" href="{{ url('/author') }}">Author</a>
+      <a class="mr-5 hover:text-gray-900" href="{{ url('/articles') }}">Artikel</a>
+      <a class="mr-5 hover:text-gray-900" href="{{ url('/penulis') }}">Author</a>
     </nav>
     <a href="{{ url('/admin/login') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition">Login</a>
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
