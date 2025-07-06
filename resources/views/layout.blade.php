@@ -31,7 +31,7 @@
       <a class="mr-5 hover:text-gray-900" href="{{ url('/articles') }}">Artikel</a>
       <a class="mr-5 hover:text-gray-900" href="{{ url('/penulis') }}">Author</a>
     </nav>
-    <a href="{{ url('/admin/login') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition">Login</a>
+    <a href="https://uas-pab-production-1c45.up.railway.app/admin/login" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition">Login</a>
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
@@ -45,7 +45,7 @@
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav class="list-none mb-10">
-          <li>
+          <!-- <li>
             <a href="{{ url('/categories/') }}" class="text-gray-600 hover:text-gray-800">Belajar Laravel</a>
           </li>
           <li>
@@ -53,7 +53,7 @@
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">Belajar PHP</a>
-          </li>
+          </li> -->
           <li>
             <a class="text-gray-600 hover:text-gray-800">Kuliner Indonesia</a>
           </li>
@@ -90,7 +90,7 @@
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">TAGS</h2>
         <nav class="list-none mb-10">
-          <li>
+          <!-- <li>
             <a class="text-gray-600 hover:text-gray-800">Belajar Laravel</a>
           </li>
           <li>
@@ -98,7 +98,7 @@
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">Belajar PHP</a>
-          </li>
+          </li> -->
           <li>
             <a class="text-gray-600 hover:text-gray-800">Mie Instan</a>
           </li>
