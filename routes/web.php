@@ -8,6 +8,5 @@ use App\Http\Controllers\ArtikelController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('post/{slug}', [PostController::class, 'detail'])->name('post.detail');
-Route::get('/login', [User::class, 'index']);
-Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel.index');
-Route::get('/author', [AuthorController::class, 'index']);
+Route::get('articles', [HomeController::class, 'articles'])->name('home.articles');
+Route::get('penulis', [HomeController::class, 'penulis'])->name('home.penulis');
