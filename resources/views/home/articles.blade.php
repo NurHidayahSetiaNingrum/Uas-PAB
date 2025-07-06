@@ -11,7 +11,7 @@
         </div>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{ $post->title }}</h2>
-          <p class="leading-relaxed">{{ $post->excerpt }}</p>
+          <a><p class="leading-relaxed">{{ $post->excerpt }}</p></a>
           <a href="{{ route('post.detail', ['slug' => $post->slug]) }}" class="inline-block text-white bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded text-sm">
         Lihat Selengkapnya
       </a>
